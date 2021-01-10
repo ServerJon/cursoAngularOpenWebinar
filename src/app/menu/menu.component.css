@@ -14,3 +14,8 @@
   float: left;
   padding: 10px;
 }
+
+#acceso {
+  position: absolute;
+  right: 10px;
+}

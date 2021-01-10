@@ -10,6 +10,7 @@ import { EntradaComponent } from './views/listado/entrada/entrada.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PaginaNoEncontradaComponent } from './views/pagina-no-encontrada/pagina-no-encontrada.component';
 import { AcercaDeNosotrosComponent } from './views/acerca-de-nosotros/acerca-de-nosotros.component';
+import { LoginComponent } from './views/login/login.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AcercaDeNosotrosComponent } from './views/acerca-de-nosotros/acerca-de-
     ListadoComponent,
     EntradaComponent,
     PaginaNoEncontradaComponent,
-    AcercaDeNosotrosComponent
+    AcercaDeNosotrosComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
