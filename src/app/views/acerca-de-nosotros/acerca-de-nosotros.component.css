@@ -1,0 +1,8 @@
+#contenedor {
+  background-color: azure;
+  height: 750px;
+}
+
+#contenedor * {
+  padding: 5px;
+}
