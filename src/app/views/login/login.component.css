@@ -1,0 +1,36 @@
+.form {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  padding: 10px;
+  width: 50%;
+  background-color: rgb(250, 228, 189);
+  display: flex;
+  flex-direction: column;
+}
+
+form * {
+  padding: 5px;
+}
+
+.form-group {
+  display: flex;
+}
+
+.form-group label {
+  width: 15%;
+}
+
+.form-group input {
+  width: 85%;
+}
+
+button {
+  margin-top: 20px;
+  width: 100px;
+  align-self: center;
+  background-color: rgb(70, 70, 250);
+  color: white;
+}

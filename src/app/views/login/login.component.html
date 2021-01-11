@@ -1,1 +1,17 @@
-<p>login works!</p>
+<div id="contenedor" class="form">
+  <form (ngSubmit)="submit()" #usuarioForm="ngForm">
+    <div class="form-group">
+      <label for="usuario">Nombre</label>
+      <input type="text" [(ngModel)]="usuario.nombre"
+        name="nombre" #nombre="ngModel">
+    </div>
+    <div class="form-group">
+      <label for="contrasegna">Contraseña</label>
+      <input type="password" [(ngModel)]="usuario.contrasegna"
+        name="contrasegna" #contrasegna="ngModel">
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
