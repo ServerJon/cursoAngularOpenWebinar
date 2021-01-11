@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Usuario } from 'src/app/shared/classes/usuario';
+import { LoginService } from 'src/app/shared/services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +13,9 @@ export class LoginComponent implements OnInit {
   // Atributos
   public usuario: Usuario
 
-  constructor() {
+  constructor(
+    private loginService: LoginService,
+    private router: Router) {
     this.usuario = new Usuario();
   }
 
@@ -19,7 +23,17 @@ export class LoginComponent implements OnInit {
   }
 
   public submit(): void {
-    console.log('Usuario: ', this.usuario);
+
+    this.loginService.login(this.usuario).subscribe(
+      (data: number) => {
+        localStorage.setItem('miTokenPersonal',`${ data }`);
+
+        this.router.navigate(['/listado']);
+      },
+      (error: Error) => {
+        console.error("Error al realizar el acceso");
+      }
+    )
   }
 
 }
