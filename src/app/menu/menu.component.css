@@ -1,0 +1,21 @@
+#menu {
+  padding: 0;
+  background-color: rgb(255, 221, 158);
+  width: 100%;
+  height: 40px;
+}
+
+#menu li {
+  display: inline;
+}
+
+#menu li span {
+  font-family: Arial;
+  float: left;
+  padding: 10px;
+}
+
+#acceso {
+  position: absolute;
+  right: 10px;
+}
