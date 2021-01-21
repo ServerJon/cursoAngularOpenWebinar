@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
 
     this.loginService.login(this.usuario).subscribe(
       (data: number) => {
+        localStorage.setItem('nombreUsuario', this.usuario.nombre);
         localStorage.setItem('miTokenPersonal',`${ data }`);
 
         this.router.navigate(['/listado']);

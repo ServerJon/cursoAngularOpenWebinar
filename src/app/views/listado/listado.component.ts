@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Entrada, Entradas } from 'src/app/shared/interfaces/entrada';
+import { Entrada } from 'src/app/shared/interfaces/entrada';
 import { EntradaService } from 'src/app/shared/services/entrada.service';
 
 @Component({
@@ -24,8 +24,8 @@ export class ListadoComponent implements OnInit {
   private listarEntradas(): void {
 
     this.entradaService.recuperarEntradas().subscribe(
-      (entradas: Entradas) => {
-        this.listadoEntradas = entradas.data;
+      (entradas: Entrada[]) => {
+        this.listadoEntradas = entradas;
       },
       (error: Error) => {
         console.log('Error: ', error);

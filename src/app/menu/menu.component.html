@@ -2,5 +2,6 @@
   <li><span> </span></li>
   <li routerLink="/listado"><span>Blog</span></li>
   <li routerLink="/nosotros"><span>Acerca de</span></li>
-  <li id="acceso" routerLink="/login"><span>Acceso</span></li>
+  <li id="acceso" *ngIf="miToken == 0" class="acceso" routerLink="/login"><span>Acceso</span></li>
+  <li id="acceso" *ngIf="miToken != 0" class="acceso" (click)="logout()"><span><strong>Usuario:</strong> {{ nombreUsuario }}</span></li>
 </ul>
