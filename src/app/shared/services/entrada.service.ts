@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import { Entradas } from '../interfaces/entrada';
+import { Entrada } from '../interfaces/entrada';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +11,8 @@ export class EntradaService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public recuperarEntradas(): Observable<Entradas> {
+  public recuperarEntradas(): Observable<Entrada[]> {
 
-    return this.httpClient.get<Entradas>('assets/json/entradas.json');
+    return this.httpClient.get<Entrada[]>('https://jsonplaceholder.typicode.com/posts');
   }
 }
